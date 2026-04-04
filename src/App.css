@@ -1,0 +1,809 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-item {
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: rgba(255,255,255,0.7);
+}
+
+.nav-item.active {
+  background: rgba(102, 126, 234, 0.3);
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea, #764ba2, #f5576c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 30px;
+  border: 2px solid rgba(102, 126, 234, 0.5);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.search-box input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.search-box input:focus {
+  border-color: #667eea;
+  background: rgba(255,255,255,0.15);
+}
+
+.search-box button {
+  padding: 16px 32px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.search-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Quick concepts */
+.quick-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.quick-label {
+  width: 100%;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 5px;
+}
+
+.quick-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.quick-btn:hover {
+  background: rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  transition: all 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  color: #667eea;
+}
+
+.feature-card p {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Demo page */
+.back-btn {
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.back-btn:hover {
+  background: rgba(102, 126, 234, 0.3);
+}
+
+.demo-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.demo-title h2 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.demo-content {
+  display: flex;
+  justify-content: center;
+}
+
+/* Visual container */
+.visual-container {
+  background: rgba(255,255,255,0.05);
+  border-radius: 24px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.visual-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.visual-header h3 {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.visual-header .subtitle {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.control-group {
+  text-align: center;
+}
+
+.control-group.full-width {
+  width: 100%;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.8);
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.5);
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  border: none;
+}
+
+/* Formula box */
+.formula-box {
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(255,255,255,0.9);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.formula-box strong {
+  color: #667eea;
+}
+
+/* Fraction display */
+.fraction-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.pizza-container {
+  text-align: center;
+}
+
+.pizza-label {
+  margin-top: 15px;
+  color: rgba(255,255,255,0.7);
+}
+
+.fraction-equation {
+  text-align: center;
+}
+
+.big-fraction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3rem;
+}
+
+.numerator, .denominator {
+  color: #667eea;
+}
+
+.fraction-line {
+  width: 60px;
+  height: 4px;
+  background: #667eea;
+  margin: 5px 0;
+}
+
+.percent-badge {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Pythagorean */
+.pythagorean-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pythagorean-squares {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.square-a, .square-b, .square-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+/* Percentage */
+.percentage-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.percent-blocks {
+  width: 100%;
+}
+
+.blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+}
+
+.block {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+
+.block.filled {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Number line */
+.numberline-display {
+  margin: 20px 0;
+  height: 120px;
+}
+
+.number-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.example {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Multiplication */
+.multiplication-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.mul-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mul-row {
+  display: flex;
+  gap: 5px;
+}
+
+.mul-cell {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  background: rgba(102, 126, 234, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.mul-cell.filled::after {
+  content: '🟦';
+}
+
+.mul-equation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2rem;
+}
+
+.mul-op, .mul-eq {
+  color: rgba(255,255,255,0.5);
+}
+
+.mul-result {
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Area display */
+.area-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.area-formula {
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 12px;
+  padding: 15px 25px;
+}
+
+.formula-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+}
+
+.formula-text strong {
+  color: #667eea;
+  font-size: 1.3rem;
+}
+
+/* Angle display */
+.angle-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.angle-values {
+  display: flex;
+  gap: 15px;
+}
+
+.angle-item {
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.angle-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* More concepts */
+.more-concepts {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.more-concepts h3 {
+  margin-bottom: 20px;
+  color: rgba(255,255,255,0.7);
+}
+
+.more-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.more-btn {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 126, 234, 0.5);
+  background: rgba(102, 126, 234, 0.1);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.more-btn:hover {
+  background: rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Explanation banner */
+.explanation-banner {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 16px;
+  padding: 16px 24px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.1rem;
+}
+
+.tips-banner {
+  background: rgba(255, 183, 77, 0.15);
+  border: 1px solid rgba(255, 183, 77, 0.3);
+  border-radius: 12px;
+  padding: 12px 20px;
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px;
+  color: rgba(255,255,255,0.7);
+}
+
+.loading-spinner {
+  font-size: 4rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* Error */
+.error-msg {
+  background: rgba(245, 87, 108, 0.2);
+  border: 1px solid rgba(245, 87, 108, 0.4);
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 15px auto;
+  max-width: 500px;
+  color: #f5576c;
+  text-align: center;
+}
+
+/* Select dropdown */
+.control-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 2px solid rgba(102, 126, 234, 0.5);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.control-group select:focus {
+  border-color: #667eea;
+  background: rgba(255,255,255,0.15);
+}
+
+.control-group select option {
+  background: #1a1a2e;
+  color: #fff;
+}
+
+/* Bar chart */
+.barchart-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.chart-label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .search-box {
+    flex-direction: column;
+  }
+  
+  .search-box button {
+    justify-content: center;
+  }
+  
+  .visual-container {
+    padding: 20px;
+  }
+}
+
+/* Mafs overrides */
+.mafs {
+  margin: 0 auto;
+}
+
+/* Expression Plotter Styles */
+.expression-input-section {
+  margin-bottom: 20px;
+}
+
+.expression-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.expression-input:focus {
+  border-color: #764ba2;
+  background: rgba(255,255,255,0.1);
+}
+
+.preset-expressions {
+  margin-top: 15px;
+}
+
+.preset-label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.preset-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preset-btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preset-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+}
+
+.range-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-input {
+  width: 80px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  text-align: center;
+}
+
+.help-text {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
